@@ -47,3 +47,7 @@ expandingCardContainer.classList.add("YOUR CLASS");
 `https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Expanding%20cards%20page`
 
 ## Video
+
+https://user-images.githubusercontent.com/99032604/198900511-304ad5a3-5a79-45d9-b98c-5db4a9456b5c.mp4
+
+

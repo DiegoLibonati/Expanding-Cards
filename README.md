@@ -35,7 +35,7 @@ I made a web page that works like a photo gallery, when you click on an image it
 
 ## Portfolio Link
 
-`https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Expanding%20cards%20page`
+`https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Expanding%20Cards%20Page`
 
 ## Video
 

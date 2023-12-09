@@ -23,19 +23,9 @@ I made a web page that works like a photo gallery, when you click on an image it
 2. CSS3
 3. HTML5
 
-## Galery
-
-![Expanding-Cards](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/Javascript/Imagenes/expandingCards-0.jpg)
-
-![Expanding-Cards](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/Javascript/Imagenes/expandingCards-1.jpg)
-
-![Expanding-Cards](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/Javascript/Imagenes/expandingCards-2.jpg)
-
-![Expanding-Cards](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/Javascript/Imagenes/expandingCards-3.jpg)
-
 ## Portfolio Link
 
-`https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Expanding%20Cards%20Page`
+[`https://www.diegolibonati.com.ar/#/project/83`](https://www.diegolibonati.com.ar/#/project/83)
 
 ## Video
 

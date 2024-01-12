@@ -61,17 +61,12 @@ This function `expandingCard()`, this function gets the parent directory of the 
 
 ```
 const expandingCard = (e: Event) => {
-  const card = e.currentTarget as HTMLElement;
-  const cardContainer = card.parentElement;
+  const target = e.currentTarget as HTMLImageElement;
+  const cardContainer = target.parentElement;
 
-  expandingCardsImages.forEach(function (expandingCardImage) {
-    const image = expandingCardImage as HTMLImageElement;
+  const prevImgOpen = document.querySelector(".cardTouched") as HTMLImageElement
 
-    if (image.parentElement !== cardContainer) {
-      image.parentElement?.classList.remove("cardTouched");
-    }
-  });
-
+  prevImgOpen.classList.remove("cardTouched")
   cardContainer?.classList.add("cardTouched");
 };
 ```

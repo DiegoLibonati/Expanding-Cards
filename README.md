@@ -1,4 +1,4 @@
-# Expanding-Cards-Page
+# Expanding Cards
 
 ## Getting Started
 
@@ -33,7 +33,7 @@ I made a web page that works like a photo gallery, when you click on an image it
 
 ## Portfolio Link
 
-[`https://www.diegolibonati.com.ar/#/project/83`](https://www.diegolibonati.com.ar/#/project/83)
+[`https://www.diegolibonati.com.ar/#/project/Expanding-Cards`](https://www.diegolibonati.com.ar/#/project/Expanding-Cards)
 
 ## Video
 

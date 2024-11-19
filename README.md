@@ -71,29 +71,40 @@ https://user-images.githubusercontent.com/99032604/198900511-304ad5a3-5a79-45d9-
 In this element we bring all the images of the page with the class `.expanding_card img`:
 
 ```
-const expandingCardsImages = document.querySelectorAll(
+export const images = document.querySelectorAll(
   ".expanding_card img"
 ) as NodeList;
 ```
 
-At this point we take all the images, go through them one by one and assign an event when clicked will be executed: `expandingCard()`:
+At this point we take all the images, go through them one by one and assign an event when clicked will be executed: `expandCard()`:
 
 ```
-expandingCardsImages.forEach(function (expandingCardImage) {
-  expandingCardImage.addEventListener("click", (e) => expandingCard(e));
-});
+const settingImagesToButtons = (image: Node) => {
+  const img = image as HTMLImageElement;
+  img.addEventListener("click", (e) => expandCard(e));
+};
+
+const onInit = () => {
+  // console.log("YOUR CONFIG FILE: ", CONFIG);
+
+  images.forEach((img) => settingImagesToButtons(img));
+};
+
+document.addEventListener("DOMContentLoaded", onInit);
 ```
 
-This function `expandingCard()`, this function gets the parent directory of the clicked image. Then it checks the parent directory of each image with the parent directory of the clicked image and if it is different. It will remove the class and then add the class to the clicked image:
+This function `expandCard()`, this function gets the parent directory of the clicked image. Then it checks the parent directory of each image with the parent directory of the clicked image and if it is different. It will remove the class and then add the class to the clicked image:
 
 ```
-const expandingCard = (e: Event) => {
+const expandCard = (e: Event) => {
   const target = e.currentTarget as HTMLImageElement;
   const cardContainer = target.parentElement;
 
-  const prevImgOpen = document.querySelector(".cardTouched") as HTMLImageElement
+  const prevImgOpen = document.querySelector(
+    ".cardTouched"
+  ) as HTMLImageElement;
 
-  prevImgOpen.classList.remove("cardTouched")
+  prevImgOpen.classList.remove("cardTouched");
   cardContainer?.classList.add("cardTouched");
 };
 ```

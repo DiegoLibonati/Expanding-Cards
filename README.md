@@ -4,21 +4,8 @@
 
 1. Clone the repository
 2. Join to the correct path of the clone
-3. Install LiveServer extension from Visual Studio Code [OPTIONAL]
-4. Click in "Go Live" from LiveServer extension
-
----
-
-1. Clone the repository
-2. Join to the correct path of the clone
-3. Open index.html in your favorite navigator
-
----
-
-1. Clone the repository
-2. Join to the correct path of the clone
-3. Execute: `yarn install`
-4. Execute: `yarn dev`
+3. Execute: `yarn install` or `npm install`
+4. Execute: `yarn dev` or `npm dev`
 
 ## Description
 
@@ -63,48 +50,4 @@ https://user-images.githubusercontent.com/99032604/198900511-304ad5a3-5a79-45d9-
 ## Testing
 
 1. Join to the correct path of the clone
-2. Execute: `yarn install`
-3. Execute: `yarn test`
-
-## Documentation
-
-In this element we bring all the images of the page with the class `.expanding_card img`:
-
-```
-export const images = document.querySelectorAll(
-  ".expanding_card img"
-) as NodeList;
-```
-
-At this point we take all the images, go through them one by one and assign an event when clicked will be executed: `expandCard()`:
-
-```
-const settingImagesToButtons = (image: Node) => {
-  const img = image as HTMLImageElement;
-  img.addEventListener("click", (e) => expandCard(e));
-};
-
-const onInit = () => {
-  // console.log("YOUR CONFIG FILE: ", CONFIG);
-
-  images.forEach((img) => settingImagesToButtons(img));
-};
-
-document.addEventListener("DOMContentLoaded", onInit);
-```
-
-This function `expandCard()`, this function gets the parent directory of the clicked image. Then it checks the parent directory of each image with the parent directory of the clicked image and if it is different. It will remove the class and then add the class to the clicked image:
-
-```
-const expandCard = (e: Event) => {
-  const target = e.currentTarget as HTMLImageElement;
-  const cardContainer = target.parentElement;
-
-  const prevImgOpen = document.querySelector(
-    ".cardTouched"
-  ) as HTMLImageElement;
-
-  prevImgOpen.classList.remove("cardTouched");
-  cardContainer?.classList.add("cardTouched");
-};
-```
+2. Execute: `yarn test`

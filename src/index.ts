@@ -1,4 +1,4 @@
-import { images } from "./constants/elements";
+import { getElements } from "./helpers/getElements";
 
 const expandCard = (e: Event) => {
   const target = e.currentTarget as HTMLImageElement;
@@ -19,6 +19,7 @@ const settingImagesToButtons = (image: Node) => {
 
 const onInit = () => {
   // console.log("YOUR CONFIG FILE: ", CONFIG);
+  const { images } = getElements();
 
   images.forEach((img) => settingImagesToButtons(img));
 };

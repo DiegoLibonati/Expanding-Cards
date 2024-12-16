@@ -33,7 +33,6 @@ I made a web page that works like a photo gallery, when you click on an image it
 "@testing-library/user-event": "^14.5.2"
 "jest": "^29.7.0"
 "jest-environment-jsdom": "^29.7.0"
-"jest-fixed-jsdom": "^0.0.9"
 "ts-jest": "^29.2.5"
 "typescript": "^5.2.2"
 "vite": "^5.0.8"

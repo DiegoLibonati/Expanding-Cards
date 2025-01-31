@@ -21,7 +21,7 @@
   height: 80%;
 }
 
-.cards__list-card {
+.cards__card {
   position: relative;
   width: 100%;
   height: 25%;
@@ -29,7 +29,7 @@
   transition: max-height 0.5s;
 }
 
-.cards__list-card-img {
+.cards__card-img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -38,7 +38,7 @@
   cursor: pointer;
 }
 
-.cards__list-card-title {
+.cards__card-title {
   position: absolute;
   z-index: 500;
   color: var(--white-color);
@@ -49,7 +49,7 @@
   font-size: 2rem;
 }
 
-.cards__list-card--touched {
+.cards__card--touched {
   max-height: 30rem;
   height: 100%;
   transition: max-height 0.5s;
@@ -60,7 +60,7 @@
     flex-direction: row;
   }
 
-  .cards__list-card {
+  .cards__card {
     position: relative;
     height: 70rem;
     max-height: 100%;
@@ -69,7 +69,7 @@
     transition: max-width 0.5s, max-height 0s, width 0.5s;
   }
 
-  .cards__list-card--touched {
+  .cards__card--touched {
     max-height: 70rem;
     max-width: 60%;
     width: 50%;

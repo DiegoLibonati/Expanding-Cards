@@ -18,7 +18,7 @@ describe("index.ts", () => {
 
     test("It must render the totality of images and the first one must be expanded and the others closed.", () => {
       const imgs = screen.getAllByRole("img");
-      const cards = document.querySelectorAll(".cards__list-card");
+      const cards = document.querySelectorAll(".cards__card");
 
       expect(cards).toHaveLength(imgs.length);
 
@@ -31,13 +31,13 @@ describe("index.ts", () => {
         expect(img).toBeInTheDocument();
         expect(heading).toBeInTheDocument();
 
-        if (index === 0) expect(card).toHaveClass("cards__list-card--touched");
-        else expect(card).not.toHaveClass("cards__list-card--touched");
+        if (index === 0) expect(card).toHaveClass("cards__card--touched");
+        else expect(card).not.toHaveClass("cards__card--touched");
       });
     });
 
     test("It must add the 'card--touched' class to the clicked image, while the other images must remain without the 'card--touched' class.", async () => {
-      const cards = document.querySelectorAll(".cards__list-card");
+      const cards = document.querySelectorAll(".cards__card");
 
       const secondCard = cards[1] as HTMLDivElement;
       const imgButton = within(secondCard).getByRole("img");
@@ -56,8 +56,8 @@ describe("index.ts", () => {
         expect(img).toBeInTheDocument();
         expect(heading).toBeInTheDocument();
 
-        if (index === 1) expect(card).toHaveClass("cards__list-card--touched");
-        else expect(card).not.toHaveClass("cards__list-card--touched");
+        if (index === 1) expect(card).toHaveClass("cards__card--touched");
+        else expect(card).not.toHaveClass("cards__card--touched");
       });
     });
   });

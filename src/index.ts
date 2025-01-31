@@ -5,11 +5,11 @@ const expandCard = (e: Event) => {
   const cardContainer = target.parentElement;
 
   const prevImgOpen = document.querySelector(
-    ".cards__list-card--touched"
+    ".cards__card--touched"
   ) as HTMLImageElement;
 
-  prevImgOpen.classList.remove("cards__list-card--touched");
-  cardContainer?.classList.add("cards__list-card--touched");
+  prevImgOpen.classList.remove("cards__card--touched");
+  cardContainer?.classList.add("cards__card--touched");
 };
 
 const settingImagesToButtons = (image: Node) => {

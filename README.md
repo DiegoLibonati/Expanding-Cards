@@ -22,6 +22,7 @@ I made a web page that works like a photo gallery, when you click on an image it
 1. Typescript
 2. CSS3
 3. HTML5
+4. Vite
 
 ## Libraries used
 

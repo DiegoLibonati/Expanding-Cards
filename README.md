@@ -6,15 +6,6 @@ This project was created primarily for **educational and learning purposes**.
 While it is well-structured and could technically be used in production, it is **not intended for commercialization**.  
 The main goal is to explore and demonstrate best practices, patterns, and technologies in software development.
 
-## Getting Started
-
-1. Clone the repository
-2. Navigate to the project folder
-3. Execute: `npm install`
-4. Execute: `npm run dev`
-
-The application will open automatically at `http://localhost:3000`
-
 ## Description
 
 **Bloomcard** is an interactive image gallery built entirely with vanilla TypeScript — no frameworks, no runtime dependencies. It presents a collection of full-height photo cards laid out side by side in a horizontal strip. Each card displays a background image and a title label. When the user clicks on a card, it smoothly expands to take up the majority of the available space while the remaining cards shrink down to slim vertical slivers, keeping the full gallery visible at all times.
@@ -64,11 +55,20 @@ No production dependencies - Pure Vanilla TypeScript
 "vite": "^7.1.6"
 ```
 
-## Portfolio Link
+## Getting Started
 
-[`https://www.diegolibonati.com.ar/#/project/bloomcard`](https://www.diegolibonati.com.ar/#/project/bloomcard)
+With the toolchain above in mind, follow these steps to run the gallery locally:
+
+1. Clone the repository
+2. Navigate to the project folder
+3. Execute: `npm install`
+4. Execute: `npm run dev`
+
+The application will open automatically at `http://localhost:3000`
 
 ## Testing
+
+Once the app runs locally, verify behavior with the Jest + jsdom suite:
 
 1. Navigate to the project folder
 2. Execute: `npm test`
@@ -79,7 +79,7 @@ For coverage report:
 npm run test:coverage
 ```
 
-## Security
+## Security Audit
 
 ### npm audit
 
@@ -92,3 +92,7 @@ npm audit
 ## Known Issues
 
 None at the moment.
+
+## Portfolio Link
+
+[`https://www.diegolibonati.com.ar/#/project/bloomcard`](https://www.diegolibonati.com.ar/#/project/bloomcard)

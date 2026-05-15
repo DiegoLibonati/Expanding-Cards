@@ -14,7 +14,7 @@ The active card is tracked exclusively through CSS classes (`card--touched`) tog
 
 The project is structured around a factory-function component pattern: `Card` produces individual card elements with their own encapsulated click handler and a `cleanup()` method for proper listener teardown, while `BloomcardPage` composes those cards into the full gallery layout and delegates lifecycle management to each child. This architecture makes the data flow explicit and keeps every piece of UI self-contained.
 
-On the tooling side, the codebase enforces TypeScript strict mode with `noUncheckedIndexedAccess` and `exactOptionalPropertyTypes`, uses ESLint with `typescript-eslint` strict rules, formats with Prettier, and is tested with Jest 30 + jsdom + Testing Library. Pre-commit hooks (Husky + lint-staged) ensure that no unformatted or unlinted code reaches the repository.
+On the tooling side, the codebase enforces TypeScript strict mode with `noUncheckedIndexedAccess` and `exactOptionalPropertyTypes`, uses ESLint with `typescript-eslint` strict rules, formats with Prettier, and is tested with Jest 30 + jsdom + Testing Library. Pre-commit hooks (Husky + lint-staged) ensure that no unformatted or unlinted code reaches the repository. A GitHub Actions CI pipeline runs lint, type-check, tests, and build on every push and pull request to `main`.
 
 ## Technologies used
 
@@ -58,6 +58,8 @@ No production dependencies - Pure Vanilla TypeScript
 ## Getting Started
 
 With the toolchain above in mind, follow these steps to run the gallery locally:
+
+> **Requires Node.js >= 22.** Use `.nvmrc` with `nvm use` to set the correct version automatically.
 
 1. Clone the repository
 2. Navigate to the project folder

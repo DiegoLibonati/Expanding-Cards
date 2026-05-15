@@ -99,6 +99,17 @@ describe("BloomcardPage", () => {
       await user.click(cards[0]!);
       expect(cards[0]!).toHaveClass("card--touched");
     });
+
+    it("should activate a card when no card is currently active", async () => {
+      const user = userEvent.setup();
+      renderPage();
+      const cards = screen.getAllByRole("button");
+      cards.forEach((card) => {
+        card.classList.remove("card--touched");
+      });
+      await user.click(cards[2]!);
+      expect(cards[2]!).toHaveClass("card--touched");
+    });
   });
 
   describe("cleanup", () => {

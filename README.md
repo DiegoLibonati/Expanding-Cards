@@ -81,6 +81,50 @@ For coverage report:
 npm run test:coverage
 ```
 
+## Continuous Integration
+
+The repository ships with a **GitHub Actions** pipeline defined in [`.github/workflows/ci.yml`](.github/workflows/ci.yml). It runs automatically on every `push` and `pull_request` targeting the `main` branch.
+
+### Pipeline overview
+
+```
+                      ┌─── PR or push to main ───┐
+                      ▼                          ▼
+┌──────────────────────┐  ┌──────────────────┐  ┌──────────────────┐
+│   lint-and-audit     │─▶│     testing      │─▶│      build       │
+│ eslint · type-check  │  │  jest + jsdom    │  │ vite production  │
+└──────────────────────┘  └──────────────────┘  └──────────────────┘
+```
+
+### Validation jobs (run on every PR and push)
+
+1. **`lint-and-audit`** — `npm run lint` (ESLint with `typescript-eslint` strict + type-checked rules) followed by `npm run type-check` (`tsc --noEmit` against `tsconfig.app.json`).
+2. **`testing`** — runs the full Jest 30 + jsdom + Testing Library suite via `npm run test`. Depends on `lint-and-audit`.
+3. **`build`** — runs `npm run build` to produce the Vite production bundle (type-check + bundling). Depends on `testing`.
+
+All three jobs run on `ubuntu-latest`, install Node from the version declared in [`.nvmrc`](.nvmrc), and cache `npm` dependencies via `actions/setup-node@v4`.
+
+### Where the pipeline outputs live
+
+| Output                          | Location                                                 |
+| ------------------------------- | -------------------------------------------------------- |
+| Lint, type-check, and test logs | **Actions** tab on GitHub                                |
+| Production bundle (`dist/`)     | Ephemeral, inside the runner (not published as artifact) |
+
+### Running the same checks locally
+
+```bash
+# lint-and-audit
+npm run lint
+npm run type-check
+
+# testing
+npm run test
+
+# build
+npm run build
+```
+
 ## Security Audit
 
 ### npm audit
